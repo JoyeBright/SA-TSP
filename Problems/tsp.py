@@ -7,6 +7,7 @@
 import random as ran
 import numpy as num
 import math
+import collections
 
 def SimpleTSP(xMin,xMax,yMin,yMax,xySize):
 
@@ -21,6 +22,11 @@ def SimpleTSP(xMin,xMax,yMin,yMax,xySize):
          d[i,j] = math.sqrt((x[i]-x[j])**2+(y[i]-y[j])**2)
          d[j,i] = d[i,j]
 
-    print(d)
+    #print("Distance Matrix:\n %s \n %d*%d Matrix "%(d,n,n))
+    Point = collections.namedtuple('Point',['xMin','xMax','yMin','yMax','n','d'])
+    p = Point(xMin,xMax,yMin,yMax,n,d)
+    return p
 
-#tsp(0,100,0,100,15)
+# tsp(0,100,0,100,15)
+# tsp(0,100,0,100,15)[0] = 0
+# tsp(0,100,0,100,15)[5] = Distance Matrix
