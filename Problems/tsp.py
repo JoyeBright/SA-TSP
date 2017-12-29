@@ -23,9 +23,10 @@ def SimpleTSP(xMin,xMax,yMin,yMax,xySize):
          d[j,i] = d[i,j]
 
     #print("Distance Matrix:\n %s \n %d*%d Matrix "%(d,n,n))
-    Point = collections.namedtuple('Point',['xMin','xMax','yMin','yMax','n','d'])
-    p = Point(xMin,xMax,yMin,yMax,n,d)
-    return p
+    return {'xMin':xMin,'xMax':xMax,'yMin':yMin,'yMax':yMax,'x':x,'y':y,'n':n,'d':d}
+    #Point = collections.namedtuple('Point',['xMin','xMax','yMin','yMax','x','y','n','d'])
+    #p = Point(xMin,xMax,yMin,yMax,x,y,n,d)
+    #return p
 
 # tsp(0,100,0,100,15)
 # tsp(0,100,0,100,15)[0] = 0
