@@ -16,16 +16,16 @@ MaxSubIt = 10  # Maximum Number of Sub-Iteration
 #--------------------------------------------------
 tsp = main(0, 100, 0, 100, 15)
 sol = ran_permutaive_solution(tsp['n'])
-CurrentSolution = ran_permutaive_solution(sol)
+CurrentSolution = sol
 SolutionCost = objective_func(sol,tsp)
 #--------------------------------------------------
 #Initialize Best Solution Ever Found
 #--------------------------------------------------
-BestSol = sol
+BestSol = CurrentSolution
 #--------------------------------------------------
 #Array to hold Best Cost Values
 #--------------------------------------------------
-#BestCost = num.zeros([MaxIt,1],dtype=int)
+BestCost = 99999999
 #--------------------------------------------------
 #Initial Temp.
 #--------------------------------------------------
@@ -35,33 +35,30 @@ T=T0
 #--------------------------------------------------
 #--------------------------------------------------
 for it in range(1,MaxIt):
- for subit in range(1,MaxSubIt):
+     for subit in range(1,MaxSubIt):
 
-     # --------------------------------------------------
-     #Create and Evaluate initial new solution
-     # --------------------------------------------------
-     newSolution = swap(sol)
-     newSolutionCost = objective_func(newSolution,tsp)
+      # --------------------------------------------------
+      #Create and Evaluate initial new solution
+      # --------------------------------------------------
+      #print(CurrentSolution)
+      newSolution = swap(CurrentSolution)
+      #print(newSolution)
+      newSolutionCost = objective_func(newSolution,tsp)
+      if(newSolutionCost<=SolutionCost):
+       CurrentSolution=newSolution
+       BestCost = objective_func(CurrentSolution,tsp)
+      else:
+       Delta = newSolutionCost - SolutionCost
+       P = m.exp(-Delta/T)
+       if(ran.uniform(0,1)<=P):
+        CurrentSolution = newSolution
+        BestCost = objective_func(CurrentSolution,tsp)
 
-     if(newSolutionCost<=SolutionCost):
-      BestSol=newSolution
-      BestCost = objective_func(BestSol,tsp)
-     else:
-      Delta = newSolutionCost - SolutionCost
-      P = m.exp(-Delta/T)
-      if(ran.uniform(0,1)<=P):
-       BestSol = newSolution
-       BestCost = objective_func(BestSol,tsp)
-
-# Store Best Cost ever Found
-#sprint(BestSol)
-BestCost = objective_func(BestSol,tsp)
-
-#Update Best Solution ever Found
-if(SolutionCost<=BestCost): BestSol = sol;
+     # Update Temp.
+     T = alpha * T
+     # Store Best Cost ever Found
+     BestCost = objective_func(CurrentSolution,tsp)
 
 print("**Best Cost**=>%d"%(BestCost))
-#Update Temp.
-T = alpha*T
 
 
