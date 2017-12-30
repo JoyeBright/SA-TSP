@@ -2,6 +2,8 @@ from MetaHeuristics.Problems.tsp import ran_permutaive_solution,main
 from MetaHeuristics.ObjectiveFunctions.tsp import objective_func
 from MetaHeuristics.Neighborhood.swap import swap
 import numpy as num
+import math as m
+import random as ran
 #--------------------------------------------------
 #Problem Specification
 #--------------------------------------------------
@@ -31,11 +33,32 @@ T=T0
 #--------------------------------------------------
 #SA Main loop
 #--------------------------------------------------
-#for it in range(1,MaxIt):
- #for subit in range(1,MaxSubIt):
+#--------------------------------------------------
+for it in range(1,MaxIt):
+ for subit in range(1,MaxSubIt):
 
+     # --------------------------------------------------
+     #Create and Evaluate initial new solution
+     # --------------------------------------------------
+     newSolution = swap(sol)
+     print(sol)
+     newSolutionCost = objective_func(newSolution,tsp)
 
+     if(newSolutionCost<=SolutionCost):
+      sol=newSolution
+     else:
+      Delta = newSolutionCost - SolutionCost
+      P = m.exp(-Delta/T)
+      if(ran.uniform(0,1)<=P): sol = newSolution
 
-print(sol)
-print(swap(sol))
+# Store Best Cost ever Found
+BestCost[it] = BestSol.Cost
+
+#Update Best Solution ever Found
+if(SolutionCost<=BestCost): BestSol = sol;
+
+print("iteration %d"%(it))
+#Update Temp.
+T = alpha*T
+
 
