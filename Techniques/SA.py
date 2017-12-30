@@ -21,11 +21,11 @@ SolutionCost = objective_func(sol,tsp)
 #--------------------------------------------------
 #Initialize Best Solution Ever Found
 #--------------------------------------------------
-BestSol = SolutionCost
+BestSol = sol
 #--------------------------------------------------
 #Array to hold Best Cost Values
 #--------------------------------------------------
-BestCost = num.zeros([MaxIt,1],dtype=int)
+#BestCost = num.zeros([MaxIt,1],dtype=int)
 #--------------------------------------------------
 #Initial Temp.
 #--------------------------------------------------
@@ -41,23 +41,26 @@ for it in range(1,MaxIt):
      #Create and Evaluate initial new solution
      # --------------------------------------------------
      newSolution = swap(sol)
-     print(sol)
      newSolutionCost = objective_func(newSolution,tsp)
 
      if(newSolutionCost<=SolutionCost):
-      sol=newSolution
+      BestSol=newSolution
+      BestCost = objective_func(BestSol,tsp)
      else:
       Delta = newSolutionCost - SolutionCost
       P = m.exp(-Delta/T)
-      if(ran.uniform(0,1)<=P): sol = newSolution
+      if(ran.uniform(0,1)<=P):
+       BestSol = newSolution
+       BestCost = objective_func(BestSol,tsp)
 
 # Store Best Cost ever Found
-BestCost[it] = BestSol.Cost
+#sprint(BestSol)
+BestCost = objective_func(BestSol,tsp)
 
 #Update Best Solution ever Found
 if(SolutionCost<=BestCost): BestSol = sol;
 
-print("iteration %d"%(it))
+print("**Best Cost**=>%d"%(BestCost))
 #Update Temp.
 T = alpha*T
 
