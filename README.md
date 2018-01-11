@@ -23,6 +23,4 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-### Acknowledgments
-
-* This Course has been offered at Univerity of Guilan by Computer Engineering faculty 
+### Ac
