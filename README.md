@@ -1,6 +1,6 @@
 ### Project Title
 
-Using MetaHeuristics in order to solve optimization problems!
+Using MetaHeuristics techniques in order to solve optimization problems!
 
 ### Getting Started
 
@@ -25,5 +25,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ### Acknowledgments
 
-* This Course has been offered at Univerity of Guilan by Computer Engineering faculty, Dr. Mojtaba Shakeri
-
+* This Course has been offered at Univerity of Guilan by Computer Engineering faculty *
