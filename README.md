@@ -25,4 +25,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ### Acknowledgments
 
-* This Course has been offered at Univerity of Guilan by Computer Engineering faculty *
+* This Course has been offered at Univerity of Guilan by Computer Engineering faculty 
