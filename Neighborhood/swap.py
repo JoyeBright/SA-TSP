@@ -11,5 +11,6 @@ def swap(tour1):
     tour2 = tour1
     tour2 [i2],tour2 [i1] = tour1[i1],tour1 [i2]
 
+    
     return tour2
 
