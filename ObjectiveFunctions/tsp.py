@@ -1,8 +1,6 @@
 from MetaHeuristics.Problems.tsp import main,ran_permutaive_solution
 import numpy as num
 
-
-
 def objective_func(tour,tsp):
     #TourLength
 
