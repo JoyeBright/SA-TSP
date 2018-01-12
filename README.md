@@ -3,8 +3,9 @@
 Using MetaHeuristics techniques in order to solve optimization problems!<br>
 
 ### Supported Problems
-The Following Problems has been implemented up to now:<br>
-TSP-SA
+
+* TSP-SA
+<br>
 <br>
 Note: This list will be updated through different iterations.
 
