@@ -4,7 +4,7 @@ Using MetaHeuristics techniques in order to solve optimization problems!<br>
 
 ### Supported Problems
 
-* TSP-SA
+* TSP-SA (Neighborhood Operator: Swap)
 <br>
 Note: This list will be updated through different iterations.
 
