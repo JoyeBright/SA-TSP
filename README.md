@@ -6,7 +6,6 @@ Using MetaHeuristics techniques in order to solve optimization problems!<br>
 
 * TSP-SA
 <br>
-<br>
 Note: This list will be updated through different iterations.
 
 ### Getting Started
