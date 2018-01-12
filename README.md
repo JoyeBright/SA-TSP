@@ -10,8 +10,7 @@ Note: This list will be updated through different iterations.
 
 ### Getting Started
 
-There is no pip or other method for importing the project automatically!<br>
-Soon it would add
+Not Defined 
 
 ### Prerequisites
 
