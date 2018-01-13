@@ -1,5 +1,5 @@
-from MetaHeuristics.Problems.tsp import ran_permutaive_solution,main
-from MetaHeuristics.ObjectiveFunctions.tsp import objective_func
+from MetaHeuristics.Problem.tsp import ran_permutaive_solution,main
+from MetaHeuristics.ObjectiveFunction.tsp import objective_func
 from MetaHeuristics.Neighborhood.swap import swap
 import numpy as num
 import math as m
