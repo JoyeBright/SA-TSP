@@ -61,4 +61,3 @@ for it in range(1,MaxIt):
 
 print("**Best Cost**=>%d"%(BestCost))
 
-
