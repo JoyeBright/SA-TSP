@@ -1,10 +1,11 @@
 ### Project Title
 
-Using MetaHeuristics techniques in order to solve optimization problems!<br>
+Using Simulated Annealing (MetaHeuristics Technique) in order to solve Travelling Salesman Problem!<br>
 
 ### Supported Problems
 
-* TSP-SA (Initial Solution: Random, Neighborhood Operator: Swap)
+* Initial Solution: Random
+* Neighborhood Operator: Swap
 
 Note: This list will be updated through different iterations.
 
