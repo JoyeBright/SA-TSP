@@ -15,7 +15,7 @@ Not Defined
 
 ### Prerequisites
 
-Python3 interpreter is enough!
+Python3 interpreter!
 
 ### Versioning
 
