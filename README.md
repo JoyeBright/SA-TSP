@@ -1,6 +1,6 @@
 ### Project Title
 
-Using Simulated Annealing (MetaHeuristics Technique) in order to solve Travelling Salesman Problem!<br>
+Using Simulated Annealing (MetaHeuristics Technique) in order to solve Travelling Salesman Problem! <br>
 
 ### Supported Problems
 
